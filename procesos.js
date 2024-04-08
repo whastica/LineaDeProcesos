@@ -67,3 +67,36 @@ formulario.addEventListener("submit", (event) => {
     // Redirigir al usuario a otra página
     window.location.href = "otra-pagina.html";
 });
+
+const respuestas = {};
+
+for (const elemento of formulario.elements) {
+    if (elemento.type === "radio" || elemento.type === "checkbox") {
+        if (elemento.checked) {
+            respuestas[elemento.name] = elemento.value;
+        }
+    } else if (elemento.type === "text") {
+        respuestas[elemento.name] = elemento.value;
+    }
+}
+
+const respuestas = {};
+
+for (let i = 1; i <= 9; i++) {
+    const pregunta = document.getElementById(`pregunta${i}`);
+    const respuestaSeleccionada = pregunta.querySelector(".opcion.seleccionada");
+
+    if (respuestaSeleccionada) {
+        respuestas[pregunta.id] = respuestaSeleccionada.id;
+    }
+}
+function mostrarRespuesta(preguntaId, respuestaId) {
+    const respuestaElement = document.getElementById(`respuesta-${preguntaId}`);
+    const respuesta = localStorage.getItem(respuestaId);
+
+    if (respuesta) {
+        respuestaElement.innerHTML = `Respuesta: ${respuesta}`;
+    } else {
+        respuestaElement.innerHTML = "";
+    }
+}

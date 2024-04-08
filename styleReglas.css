@@ -46,20 +46,6 @@ p {
 
 /* Diseño general */
 
-h1 {
-    text-align: center;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-input[type="radio"] {
-    margin-right: 10px;
-}
-
-/* Estilo de las preguntas */
-
 .pregunta {
     background-color: #000;
     padding: 20px;

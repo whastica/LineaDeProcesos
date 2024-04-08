@@ -3,83 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encuesta para tu aplicación</title>
+    <title>Configuracion del contexto</title>
     <link rel="stylesheet" href="styleForm.css">
 </head>
 <body>
-<h1>Encuesta para tu aplicación</h1>
+<h1>Configuracion del contexto</h1>
+<p>A continuación usted deberá llenar el siguiente formulario con el fin de darnos a conocer de mejor manera lo que espera ud de su aplicación</p>
 <form action="#">
-    <h2>Público objetivo</h2>
     <p>¿A qué público estará destinada tu aplicación?</p>
     <input type="radio" id="todos" name="publico" value="todos" checked>
     <label for="todos">Todos</label><br>
     <input type="radio" id="sector" name="publico" value="sector">
     <label for="sector">Para un sector en especial</label><br>
 
-    <h2>Funcionalidades</h2>
-    <p>¿Qué funcionalidades básicas tendrá tu aplicación?</p>
+    <p>¿Tu aplicacion contara con la funciones basicas?</p>
     <input type="checkbox" id="mensajes" name="funcionalidades" value="mensajes" checked>
     <label for="mensajes">Mensajes de texto, voz e imágenes</label><br>
-    <p>¿Qué funcionalidades avanzadas tendrá tu aplicación?</p>
-    <input type="checkbox" id="videollamadas" name="funcionalidades" value="videollamadas">
-    <label for="videollamadas">Videollamadas</label><br>
-    <input type="checkbox" id="encriptacion" name="funcionalidades" value="encriptacion">
-    <label for="encriptacion">Encriptación de extremo a extremo</label><br>
-    <input type="checkbox" id="pagos" name="funcionalidades" value="pagos">
-    <label for="pagos">Pagos integrados</label><br>
 
-    <h2>Diseño</h2>
-    <p>¿En qué plataforma estará disponible tu aplicación?</p>
+    <p>¿Selecciona qué funcionalidades avanzadas tendrá tu aplicación?</p>
+    <input type="checkbox" id="videollamadas" name="funcionalidades" value="videollamadas">
+    <label for="videollamadas">Videollamadas con tus contactos y grupales</label><br>
+    <input type="checkbox" id="encriptacion" name="funcionalidades" value="encriptacion">
+    <label for="encriptacion">Conversaciones seguras y cifradas</label><br>
+    <input type="checkbox" id="pagos" name="funcionalidades" value="pagos">
+    <label for="pagos">Medios de pago</label><br>
+
+    <p>¿En que plataforma podra ser ejecutada tu aplicacion?</p>
     <input type="checkbox" id="android" name="plataforma" value="android" checked>
     <label for="android">Android</label><br>
     <input type="checkbox" id="ios" name="plataforma" value="ios" checked>
     <label for="ios">iOS</label><br>
     <input type="checkbox" id="web" name="plataforma" value="web" checked>
     <label for="web">Web</label><br>
-    <p>¿Qué estilo de interfaz tendrá tu aplicación?</p>
-    <input type="radio" id="minimalista" name="estilo" value="minimalista" checked>
-    <label for="minimalista">Minimalista</label><br>
-    <input type="radio" id="personalizable" name="estilo" value="personalizable">
-    <label for="personalizable">Personalizable</label><br>
 
-    <h2>Implementación</h2>
-    <p>¿Qué lenguaje de programación se usará para desarrollar tu aplicación?</p>
-    <input type="radio" id="java" name="lenguaje" value="java" checked>
-    <label for="java">Java (Android)</label><br>
-    <input type="radio" id="swift" name="lenguaje" value="swift">
-    <label for="swift">Swift (iOS)</label><br>
-    <input type="radio" id="javascript" name="lenguaje" value="javascript">
-    <label for="javascript">JavaScript (Web)</label><br>
-    <p>¿Qué framework de desarrollo se usará para desarrollar tu aplicación?</p>
-    <input type="radio" id="nativo" name="framework" value="nativo" checked>
-    <label for="nativo">Nativo</label><br>
-    <input type="radio" id="multiplataforma" name="framework" value="multiplataforma">
-    <label for="multiplataforma">Multiplataforma (React Native, Flutter)</label><br>
-    <h2>Pruebas</h2>
-    <p>¿Qué tipo de pruebas se realizarán a tu aplicación?</p>
-    <input type="checkbox" id="unitarias" name="pruebas" value="unitarias" checked>
-    <label for="unitarias">Pruebas unitarias</label><br>
+    <p>¿La aplicacion tendra un estilo minimalista o podrá se personalizada por el usuario?</p>
+    <input type="radio" id="minimalista" name="estilo" value="minimalista" checked>
+    <label for="minimalista">Diseño Minimalista</label><br>
+    <input type="radio" id="personalizable" name="estilo" value="personalizable">
+    <label for="personalizable">Diseño Personalizable</label><br>
+
+    <p>¿La plataforma tendra un prelanzamiento con usuarios seleccionadosc con el fin de que los usuario prueben la aplicacion antes ?</p>
     <input type="checkbox" id="integracion" name="pruebas" value="integracion">
-    <label for="integracion">Pruebas de integración</label><br>
+    <label for="integracion">No</label><br>
     <input type="checkbox" id="aceptacion" name="pruebas" value="aceptacion">
-    <label for="aceptacion">Pruebas de aceptación</label><br>
-    <p>¿Qué nivel de automatización tendrán las pruebas?</p>
-    <input type="radio" id="manuales" name="automatizacion" value="manuales" checked>
-    <label for="manuales">Pruebas manuales</label><br>
-    <input type="radio" id="automatizadas" name="automatizacion" value="automatizadas">
-    <label for="automatizadas">Pruebas automatizadas</label><br>
-    <h2>Lanzamiento</h2>
+    <label for="aceptacion">Si</label><br>
+
     <p>¿En qué tienda de aplicaciones se lanzará tu aplicación?</p>
     <input type="checkbox" id="googleplay" name="tienda" value="googleplay" checked>
     <label for="googleplay">Google Play Store (Android)</label><br>
     <input type="checkbox" id="appstore" name="tienda" value="appstore" checked>
     <label for="appstore">App Store (iOS)</label><br>
-    <p>¿Qué estrategia de marketing se usará para promocionar tu aplicación?</p>
-    <input type="radio" id="marketingonline" name="marketing" value="marketingonline" checked>
-    <label for="marketingonline">Marketing online</label><br>
-    <input type="radio" id="marketingoffline" name="marketing" value="marketingoffline">
-    <label for="marketingoffline">Marketing offline</label><br>
 
+    <p>¿Que tipo de publicidad tendra tu aplicacion?</p>
+    <input type="radio" id="marketingonline" name="marketing" value="marketingonline" checked>
+    <label for="marketingonline">online</label><br>
+    <input type="radio" id="marketingoffline" name="marketing" value="marketingoffline">
+    <label for="marketingoffline">offline</label><br>
+    <br>
     <input type="submit" value="Enviar">
 
 </form>

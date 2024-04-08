@@ -3,28 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparación de la primera respuesta</title>
+  <title>Reglas de adaptacion</title>
   <link rel="stylesheet" href="styleReglas.css">
 </head>
 <body>
-<h1>Comparación de la primera respuesta</h1>
+<h1>Reglas de adaptacion</h1>
 
-<p>La primera respuesta del formulario fue: <strong>{{ respuesta }}</strong></p>
+<div class="pregunta">
+  <h2>¿La aplicación se va a desarrollar para usuarios personales o profesionales?</h2>
 
-<p>¿La aplicación se va a desarrollar para usuarios personales o profesionales?</p>
+  <ul class="opciones">
+    <li class="opcion" id="personales" onclick="seleccionarRespuesta(this)">Personales</li>
+    <li class="opcion" id="profesionales" onclick="seleccionarRespuesta(this)">Profesionales</li>
+  </ul>
+  <p id="respuesta-pregunta1"></p>
+</div>
 
-<p>
-  <input type="radio" id="personales" name="tipoUsuario" value="personales" {{ respuesta == "todos" ? "checked" : "" }}>
-  <label for="personales">Personales</label>
-</p>
+<div class="pregunta">
+  <h2>¿La aplicación requiere funcionalidades básicas o avanzadas?</h2>
 
-<p>
-  <input type="radio" id="profesionales" name="tipoUsuario" value="profesionales" {{ respuesta == "sector" ? "checked" : "" }} style="background-color: green">
-  <label for="profesionales">Profesionales</label>
-</p>
+  <ul class="opciones">
+    <li class="opcion" id="basicas" onclick="seleccionarRespuesta(this)">Funcionalidades Basicas</li>
+    <li class="opcion" id="avanzadas" onclick="seleccionarRespuesta(this)">Funcionalidades Avanzadas</li>
+  </ul>
+</div>
+
+<div class="pregunta">
+  <h2>¿La aplicación se va a desarrollar para Android, iOS o web?</h2>
+
+  <ul class="opciones">
+    <li class="opcion" id="android" onclick="seleccionarRespuesta(this)">Android</li>
+    <li class="opcion" id="ios" onclick="seleccionarRespuesta(this)">iOS</li>
+    <li class="opcion" id="web" onclick="seleccionarRespuesta(this)">Web</li>
+  </ul>
+</div>
+
+<div class="pregunta">
+  <h2>Qué lenguaje de programación se va a utilizar para desarrollar la aplicación</h2>
+
+  <ul class="opciones">
+    <li class="opcion" id="java" onclick="seleccionarRespuesta(this)">Java (Android)</li>
+    <li class="opcion" id="swift" onclick="seleccionarRespuesta(this)">Swift</li>
+    <li class="opcion" id="js" onclick="seleccionarRespuesta(this)">Java Script</li>
+  </ul>
+</div>
+
+<div class="pregunta">
+  <h2>¿Se va a utilizar un framework de desarrollo nativo o multiplataforma?</h2>
+
+  <ul class="opciones">
+    <li class="opcion" id="Nativo" onclick="seleccionarRespuesta(this)">Nativo</li>
+    <li class="opcion" id="Multiplataforma" onclick="seleccionarRespuesta(this)">Multiplataforma</li>
+  </ul>
+</div>
+
+<div class="pregunta">
+  <h2>¿Qué tipo de pruebas se van a realizar?</h2>
+
+  <ul class="opciones">
+    <li class="opcion" id="unitarias" onclick="seleccionarRespuesta(this)">Pruebas unitarias</li>
+    <li class="opcion" id="integracion" onclick="seleccionarRespuesta(this)">Pruebas de integración</li>
+    <li class="opcion" id="aceptacion" onclick="seleccionarRespuesta(this)">Pruebas de aceptación</li>
+  </ul>
+</div>
+
+<div class="pregunta">
+  <h2>¿Las pruebas se van a realizar de forma manual o automatizada?</h2>
+
+  <ul class="opciones">
+    <li class="opcion" id="manuales" onclick="seleccionarRespuesta(this)">Pruebas Manuales</li>
+    <li class="opcion" id="automatizadas" onclick="seleccionarRespuesta(this)">Pruebas automatizadas</li>
+  </ul>
+</div>
+
+<div class="pregunta">
+  <h2>¿Qué tipo de pruebas se van a realizar?</h2>
+
+  <ul class="opciones">
+    <li class="opcion" id="google" onclick="seleccionarRespuesta(this)">Google Play</li>
+    <li class="opcion" id="store" onclick="seleccionarRespuesta(this)">App Store</li>
+  </ul>
+</div>
+
+<div class="pregunta">
+  <h2>¿Se va a utilizar una estrategia de marketing online o offline?</h2>
+
+  <ul class="opciones">
+    <li class="opcion" id="online" onclick="seleccionarRespuesta(this)">Online</li>
+    <li class="opcion" id="offline" onclick="seleccionarRespuesta(this)">Offline</li>
+  </ul>
+</div>
 
 <script>
   const respuesta = localStorage.getItem("respuestaPublico");
+
+  function seleccionarRespuesta(opcion) {
+    const opciones = document.querySelectorAll(".opcion");
+
+    for (const opcion of opciones) {
+      opcion.classList.remove("seleccionada");
+    }
+
+    opcion.classList.add("seleccionada");
+
+    // Guardar la respuesta seleccionada en el almacenamiento local
+    localStorage.setItem("respuestaTipoUsuario", opcion.id);
+  }
+
+  if (respuesta) {
+    const opcionSeleccionada = document.getElementById(respuesta);
+    opcionSeleccionada.classList.add("seleccionada");
+  }
 </script>
 </body>
 </html>
