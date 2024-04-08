@@ -1,0 +1,99 @@
+/* Colores */
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ddd;
+}
+
+/* Tipografía */
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Diseño general */
+
+form {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #e50914;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d30712;
+}
+
+/* Efectos de animación */
+
+input[type="radio"]:hover,
+input[type="checkbox"]:hover {
+    box-shadow: 0 0 5px #ddd;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 5px #d30712;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}

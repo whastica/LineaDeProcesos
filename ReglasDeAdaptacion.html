@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparación de la primera respuesta</title>
+  <link rel="stylesheet" href="styleReglas.css">
+</head>
+<body>
+<h1>Comparación de la primera respuesta</h1>
+
+<p>La primera respuesta del formulario fue: <strong>{{ respuesta }}</strong></p>
+
+<p>¿La aplicación se va a desarrollar para usuarios personales o profesionales?</p>
+
+<p>
+  <input type="radio" id="personales" name="tipoUsuario" value="personales" {{ respuesta == "todos" ? "checked" : "" }}>
+  <label for="personales">Personales</label>
+</p>
+
+<p>
+  <input type="radio" id="profesionales" name="tipoUsuario" value="profesionales" {{ respuesta == "sector" ? "checked" : "" }} style="background-color: green">
+  <label for="profesionales">Profesionales</label>
+</p>
+
+<script>
+  const respuesta = localStorage.getItem("respuestaPublico");
+</script>
+</body>
+</html>
