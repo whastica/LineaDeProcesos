@@ -10,24 +10,37 @@
 <h1>Reglas de adaptacion</h1>
 
 <div class="pregunta">
+  <h2>Análisis de requisitos</h2>
+
+  <p>Descripción: Definir las necesidades y funcionalidades de la aplicación.</p>
+  <p>Objetivo: Entender las expectativas del usuario y las características del mercado.</p>
+  <p>Roles: Analista de requisitos, Gerente de producto</p>
+  <p>Artefactos de entrada: Casos de uso, Historias de usuario</p>
+  <p>Artefactos de salida: Especificación de requisitos</p>
+
+  <p id="respuesta-pregunta1"></p>
   <h2>¿La aplicación se va a desarrollar para usuarios personales o profesionales?</h2>
 
   <ul class="opciones">
-    <li class="opcion" id="personales" onclick="seleccionarRespuesta(this)">Personales</li>
-    <li class="opcion" id="profesionales" onclick="seleccionarRespuesta(this)">Profesionales</li>
+    <li class="opcion" id="personales">Personales</li>
+    <li class="opcion" id="profesionales">Profesionales</li>
   </ul>
-  <p id="respuesta-pregunta1"></p>
 </div>
 
 <div class="pregunta">
-  <h2>¿La aplicación requiere funcionalidades básicas o avanzadas?</h2>
+  <h2>Diseño</h2>
+
+  <p>Descripción: Definir las necesidades y funcionalidades de la aplicación.</p>
+  <p>Objetivo: Entender las expectativas del usuario y las características del mercado.</p>
+  <p>Roles: Analista de requisitos, Gerente de producto</p>
+  <p>Artefactos de entrada: Casos de uso, Historias de usuario</p>
+  <p>Artefactos de salida: Especificación de requisitos</p>
 
   <ul class="opciones">
     <li class="opcion" id="basicas" onclick="seleccionarRespuesta(this)">Funcionalidades Basicas</li>
     <li class="opcion" id="avanzadas" onclick="seleccionarRespuesta(this)">Funcionalidades Avanzadas</li>
   </ul>
 </div>
-
 <div class="pregunta">
   <h2>¿La aplicación se va a desarrollar para Android, iOS o web?</h2>
 
@@ -94,26 +107,6 @@
   </ul>
 </div>
 
-<script>
-  const respuesta = localStorage.getItem("respuestaPublico");
-
-  function seleccionarRespuesta(opcion) {
-    const opciones = document.querySelectorAll(".opcion");
-
-    for (const opcion of opciones) {
-      opcion.classList.remove("seleccionada");
-    }
-
-    opcion.classList.add("seleccionada");
-
-    // Guardar la respuesta seleccionada en el almacenamiento local
-    localStorage.setItem("respuestaTipoUsuario", opcion.id);
-  }
-
-  if (respuesta) {
-    const opcionSeleccionada = document.getElementById(respuesta);
-    opcionSeleccionada.classList.add("seleccionada");
-  }
-</script>
+<script src="procesos.js"></script>
 </body>
 </html>

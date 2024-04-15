@@ -2,66 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuracion del contexto</title>
-    <link rel="stylesheet" href="styleForm.css">
+    <title>Formulario de ejemplo</title>
 </head>
 <body>
-<h1>Configuracion del contexto</h1>
-<p>A continuación usted deberá llenar el siguiente formulario con el fin de darnos a conocer de mejor manera lo que espera ud de su aplicación</p>
-<form action="#">
-    <p>¿A qué público estará destinada tu aplicación?</p>
-    <input type="radio" id="todos" name="publico" value="todos" checked>
-    <label for="todos">Todos</label><br>
-    <input type="radio" id="sector" name="publico" value="sector">
-    <label for="sector">Para un sector en especial</label><br>
-
-    <p>¿Tu aplicacion contara con la funciones basicas?</p>
-    <input type="checkbox" id="mensajes" name="funcionalidades" value="mensajes" checked>
-    <label for="mensajes">Mensajes de texto, voz e imágenes</label><br>
-
-    <p>¿Selecciona qué funcionalidades avanzadas tendrá tu aplicación?</p>
-    <input type="checkbox" id="videollamadas" name="funcionalidades" value="videollamadas">
-    <label for="videollamadas">Videollamadas con tus contactos y grupales</label><br>
-    <input type="checkbox" id="encriptacion" name="funcionalidades" value="encriptacion">
-    <label for="encriptacion">Conversaciones seguras y cifradas</label><br>
-    <input type="checkbox" id="pagos" name="funcionalidades" value="pagos">
-    <label for="pagos">Medios de pago</label><br>
-
-    <p>¿En que plataforma podra ser ejecutada tu aplicacion?</p>
-    <input type="checkbox" id="android" name="plataforma" value="android" checked>
-    <label for="android">Android</label><br>
-    <input type="checkbox" id="ios" name="plataforma" value="ios" checked>
-    <label for="ios">iOS</label><br>
-    <input type="checkbox" id="web" name="plataforma" value="web" checked>
-    <label for="web">Web</label><br>
-
-    <p>¿La aplicacion tendra un estilo minimalista o podrá se personalizada por el usuario?</p>
-    <input type="radio" id="minimalista" name="estilo" value="minimalista" checked>
-    <label for="minimalista">Diseño Minimalista</label><br>
-    <input type="radio" id="personalizable" name="estilo" value="personalizable">
-    <label for="personalizable">Diseño Personalizable</label><br>
-
-    <p>¿La plataforma tendra un prelanzamiento con usuarios seleccionadosc con el fin de que los usuario prueben la aplicacion antes ?</p>
-    <input type="checkbox" id="integracion" name="pruebas" value="integracion">
-    <label for="integracion">No</label><br>
-    <input type="checkbox" id="aceptacion" name="pruebas" value="aceptacion">
-    <label for="aceptacion">Si</label><br>
-
-    <p>¿En qué tienda de aplicaciones se lanzará tu aplicación?</p>
-    <input type="checkbox" id="googleplay" name="tienda" value="googleplay" checked>
-    <label for="googleplay">Google Play Store (Android)</label><br>
-    <input type="checkbox" id="appstore" name="tienda" value="appstore" checked>
-    <label for="appstore">App Store (iOS)</label><br>
-
-    <p>¿Que tipo de publicidad tendra tu aplicacion?</p>
-    <input type="radio" id="marketingonline" name="marketing" value="marketingonline" checked>
-    <label for="marketingonline">online</label><br>
-    <input type="radio" id="marketingoffline" name="marketing" value="marketingoffline">
-    <label for="marketingoffline">offline</label><br>
+<h1>Formulario de ejemplo</h1>
+<form action="Inicio.html" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
     <br>
-    <input type="submit" value="Enviar">
-
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+    <br>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" required></textarea>
+    <br>
+    <button type="submit">Enviar</button>
 </form>
 </body>
 </html>

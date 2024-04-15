@@ -85,3 +85,16 @@ p {
         width: 90%;
     }
 }
+
+.opcion {
+    background-color: #ffffff; /* Blanco */
+    color: #000000; /* Negro */
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.opcion.seleccionado {
+    background-color: #00FF00; /* Verde */
+    color: #000000; /* Negro */
+}
